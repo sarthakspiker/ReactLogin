@@ -1,11 +1,25 @@
-import React from 'react';
+import React, {Component} from 'react';
+import { isPropertySignature } from 'typescript';
 import './App.css';
 import './float-label.css';
-function Loginpage(){
-   return(
+
+export default function Loginpage ({Register}:{Register:any}){
+
+//   constructor(props:any) {
+//     super(props)
+
+//     this.state = {
+
+//     }
+// }
+//  signUp(){
+//   console.log("test");
+//   //this.props;
+// }
+return(
      <div className="container">
       
-    <p className="account_text">Don't have an account?<span className="signuplink"> Sign up</span></p>
+    <p className="account_text">Don't have an account?<span className="signuplink" onClick={()=>Register()}> Sign up</span></p>
     
     <form className="login_form">
        <h2> Welcome To<span className="signuplink"> Blue Mind</span></h2>
@@ -22,7 +36,7 @@ function Loginpage(){
 
 </div>
 <div className="forgot_div">
-<a className="forgot_pass">Forgot password?</a>
+<a className="forgot_pass" href="#">Forgot password?</a>
 </div>
 <button type="submit" className="btn btn-primary login_button">Log In</button>
 </form>
@@ -30,4 +44,5 @@ function Loginpage(){
 
    ) 
 }
-export default Loginpage;
+//}
+// export default Loginpage;
