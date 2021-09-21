@@ -1,24 +1,33 @@
 
 .formdiv{
-  min-height: 90vh;
-  border-radius: 15px 0 0 15px;
-  width:80%;
+ 
+
+min-height: 90vh;
+border-radius:15px 0 0 15px;
   background-color: white;
   display: flex;
   justify-content: left;
   }
   .imagediv{
-      min-height: 90vh;
-      width:80%;
+      
+  
+     min-height:90vh;
       border-radius: 0 15px 15px 0;
-      background-size: cover;
       background-image: url('../src/Banner\ \(1\).svg');
-      background-position: center center;
+   background-size: cover;
+   background-position:center center;
+    
   }
   .mycontainer{
-      width:95%;
+ width:90%;
+ padding-top: 2%;
+ 
+    
       
-      
+  }
+  .containerrow{
+    box-shadow: 10px 10px 10px grey ;
+    border-radius: 15px;
   }
   .account_text{
       margin-top: 1rem;
@@ -37,6 +46,7 @@
   .signuplink{
   color: #1e1fec;
   font-weight: bold;
+  cursor: pointer;
   }
   .login_form{
     margin-left: 10%;
@@ -60,4 +70,77 @@
   }
 .inner_form_div{
   margin-top: 5%;
+}
+.border-lable-flt {
+  display: block;
+  position: relative;
+}
+.border-lable-flt label, .border-lable-flt > span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  cursor: text;
+  font-size: 75%;
+  opacity: 1;
+  
+  -webkit-transition: all .2s;
+          transition: all .2s;
+  top: -.5em;
+  left: 0.75rem;
+  z-index: 3;
+  line-height: 1;
+  padding: 0 1px;
+}
+.border-lable-flt label::after, .border-lable-flt > span::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  background: white;
+  height: 2px;
+  top: 50%;
+  
+  left: -.2em;
+  right: -.2em;
+  z-index: -1;
+}
+.border-lable-flt .form-control::-webkit-input-placeholder {
+  opacity: 1;
+  -webkit-transition: all .2s;
+          transition: all .2s;
+}
+.border-lable-flt .form-control:placeholder-shown:not(:focus)::-webkit-input-placeholder {
+  opacity: 0;
+}
+.border-lable-flt .form-control:placeholder-shown:not(:focus) + * {
+  font-size: 150%;
+  opacity: .5;
+  top: .3em;
+}
+
+.input-group .border-lable-flt {
+  display: table-cell;
+}
+.input-group .border-lable-flt .form-control {
+  border-radius: 0.25rem;
+}
+.input-group .border-lable-flt:not(:last-child), .input-group .border-lable-flt:not(:last-child) .form-control {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border-right: 0;
+}
+.input-group .border-lable-flt:not(:first-child), .input-group .border-lable-flt:not(:first-child) .form-control {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.form-control:focus {
+  color: black;
+box-shadow: none;
+  background-color: #fff;
+  border-color: #1e1fec;
+  
+}
+.myinput{
+  margin:3% 0 3% 0;
+ 
 }
