@@ -4,6 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import './App.css';
 import Loginpage from './loginpage';
+import Forgotpasspage from './forgotpasspage';
+import LoginSignuppage from './loginsignuppage';
 import Registrationpage from './registrationpage';
 
 const mountedStyle = { animation: "inAnimation 300ms ease-in" };

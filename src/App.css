@@ -13,13 +13,13 @@ border-radius:15px 0 0 15px;
   
      min-height:90vh;
       border-radius: 0 15px 15px 0;
-      background-image: url('../src/Banner\ \(1\).svg');
+      background-image: url('../src/Banner-15.svg');
    background-size: cover;
    background-position:center center;
     
   }
   .mycontainer{
- width:90%;
+ width:80%;
  padding-top: 2%;
  
     
@@ -46,6 +46,7 @@ border-radius:15px 0 0 15px;
   .signuplink{
   color: #1e1fec;
   font-weight: bold;
+  font-family: "Open Sans", sans-serif;
   cursor: pointer;
   }
   .login_form{
@@ -55,13 +56,13 @@ border-radius:15px 0 0 15px;
   .login_button{
     width: 100%;
     padding: 2%;
-    margin-top: 5%;
+    margin-top: 3%;
     background-color: #1e1fec;
   }
   .forgot_pass{
     font-size: small;
     color: #1e1fec;
-    
+    font-family: "Open Sans", sans-serif;
     text-decoration: none;
     cursor: pointer;
   }
@@ -112,6 +113,11 @@ border-radius:15px 0 0 15px;
   opacity: 0;
 }
 .border-lable-flt .form-control:placeholder-shown:not(:focus) + * {
+  font-size: 130%;
+  opacity: .5;
+  top: .3em;
+}
+.border-lable-flt .form-control-lg:placeholder-shown:not(:focus) + * {
   font-size: 150%;
   opacity: .5;
   top: .3em;
@@ -154,4 +160,35 @@ box-shadow: none;
     opacity: 1;
     visibility: visible;
   }
+}
+.forgot_text{
+  color:#1e1fec;
+  font-family: "Open Sans", sans-serif;
+  font-size: medium;
+  
+  font-weight: lighter;
+}
+.black_text{
+  color:black;
+}
+.benefit_text{
+  margin-top: 1rem;
+  font-family: "Open Sans", sans-serif;
+  font-size:small;
+  margin-left: 10%;
+  font-weight: lighter;
+  
+}
+
+.form-check-label{
+  font-size:x-small;
+  font-family: "Open Sans", sans-serif;
+}
+.ma-left{
+  margin-left: 10%;
+}
+.social_icon{
+  width:35px;
+  padding:1%;
+  cursor: pointer;
 }
