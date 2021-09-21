@@ -4,7 +4,7 @@
   border-radius: 15px 0 0 15px;
   width:80%;
   background-color: white;
-  display: flex;
+  display: block;
   justify-content: left;
   }
   .imagediv{
