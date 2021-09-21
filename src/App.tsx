@@ -7,6 +7,8 @@ import './App.css';
 import Loginpage from '../src/loginpage';
 import Forgotpasspage from './forgotpasspage';
 import LoginSignuppage from './loginsignuppage';
+import Registrationpage from './registrationpage';
+
 function App() {
   return (
 
@@ -17,6 +19,12 @@ function App() {
               <Forgotpasspage></Forgotpasspage>
               {/* <Loginpage></Loginpage> */}
               {/* <LoginSignuppage></LoginSignuppage> */}
+              <div style={{display:''}}>  
+              <Loginpage></Loginpage>
+              </div>
+              <div style={{display:'none'}}>
+              <Registrationpage></Registrationpage>
+              </div>
             </div>
             <div className="col imagediv">
              

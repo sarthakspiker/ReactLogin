@@ -5,7 +5,7 @@
 min-height: 90vh;
 border-radius:15px 0 0 15px;
   background-color: white;
-  display: flex;
+  display: block;
   justify-content: left;
   }
   .imagediv{
