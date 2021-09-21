@@ -12,7 +12,7 @@ function App() {
 
     <body >
     <div className="container-fluid mycontainer" >
-       <div className="row">
+       <div className="row containerrow">
             <div className="col formdiv">
               <div style={{display:''}}>  
               <Loginpage></Loginpage>
