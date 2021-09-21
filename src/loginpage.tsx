@@ -8,7 +8,7 @@ function Loginpage(){
     <p className="account_text">Don't have an account?<span className="signuplink"> Sign up</span></p>
     
     <form className="login_form">
-       <h2> Welcome To<span className="signuplink"> Blue Mind</span></h2>
+       <h2> Welcome To<span className="signuplink"> BlueMind</span></h2>
        <div className="inner_form_div">
       
   <div className="form-group border-lable-flt">
@@ -24,7 +24,8 @@ function Loginpage(){
 <div className="forgot_div">
 <a className="forgot_pass">Forgot password?</a>
 </div>
-<button type="submit" className="btn btn-primary login_button">Log In</button>
+<button type="submit" className="btn btn-primary login_button">Advisor Log In</button>
+<button type="submit" className="btn btn-primary login_button">Client Log In</button>
 </form>
 </div>
 

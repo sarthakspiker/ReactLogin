@@ -5,7 +5,8 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 import './App.css';
 
 import Loginpage from '../src/loginpage';
-
+import Forgotpasspage from './forgotpasspage';
+import LoginSignuppage from './loginsignuppage';
 function App() {
   return (
 
@@ -13,7 +14,9 @@ function App() {
     <div className="container-fluid mycontainer" >
        <div className="row containerrow">
             <div className="col formdiv">
-              <Loginpage></Loginpage>
+              <Forgotpasspage></Forgotpasspage>
+              {/* <Loginpage></Loginpage> */}
+              {/* <LoginSignuppage></LoginSignuppage> */}
             </div>
             <div className="col imagediv">
              
