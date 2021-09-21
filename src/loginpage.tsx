@@ -3,7 +3,7 @@ import { isPropertySignature } from 'typescript';
 import './App.css';
 import './float-label.css';
 
-export default function Loginpage ({Register}:{Register:any}){
+export default function Loginpage ({showSignupPage,showForgetPassPage}:{showSignupPage:any,showForgetPassPage:any}){
 
 //   constructor(props:any) {
 //     super(props)
@@ -12,14 +12,11 @@ export default function Loginpage ({Register}:{Register:any}){
 
 //     }
 // }
-//  signUp(){
-//   console.log("test");
-//   //this.props;
-// }
+
 return(
      <div className="container">
       
-    <p className="account_text">Don't have an account?<span className="signuplink" onClick={()=>Register()}> Sign up</span></p>
+    <p className="account_text">Don't have an account?<span className="signuplink" onClick={()=>showSignupPage()}> Sign up</span></p>
     
     <form className="login_form">
        <h2> Welcome To<span className="signuplink"> BlueMind</span></h2>
@@ -36,7 +33,7 @@ return(
 
 </div>
 <div className="forgot_div">
-<a className="forgot_pass" href="#">Forgot password?</a>
+<span className="forgot_pass" onClick={()=>showForgetPassPage()} >Forgot password?</span>
 </div>
 <button type="submit" className="btn btn-primary login_button">Advisor Log In</button>
 <button type="submit" className="btn btn-primary login_button">Client Log In</button>
@@ -45,5 +42,3 @@ return(
 
    ) 
 }
-//}
-// export default Loginpage;

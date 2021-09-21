@@ -6,33 +6,40 @@ import './App.css';
 import Loginpage from './loginpage';
 import Forgotpasspage from './forgotpasspage';
 import LoginSignuppage from './loginsignuppage';
-import Registrationpage from './registrationpage';
 
 const mountedStyle = { animation: "inAnimation 300ms ease-in" };
-export class App extends Component<{},{hideReg:boolean}>{
+export class App extends Component<{},{showSigninPage:boolean,showSignupPage:boolean,showForgetpassPage:boolean}>{
     
     constructor(props:{}) {
         super(props)
 
         this.state = {
-            hideReg : true
+            showSigninPage:true,
+            showSignupPage:false,
+            showForgetpassPage:false
         }
     }
     
-    Register = ()=>{
-        console.log("I will Register");
-        this.setState({hideReg:false});
+    showSigninPage = ()=>{
+        this.setState({showSignupPage:false,showSigninPage:true,showForgetpassPage:false});
+    }
+    showSignupPage = ()=>{
+        this.setState({showSignupPage:true,showSigninPage:false,showForgetpassPage:false});
+    }
+    showForgetPassPage = ()=>{
+        this.setState({showSignupPage:false,showSigninPage:false,showForgetpassPage:true});
     }
   
   render(){  
-      const {hideReg} = this.state;
+      const {showSigninPage,showSignupPage,showForgetpassPage} = this.state;
     return (
 
     <div className="container-fluid mycontainer" >
        <div className="row containerrow">
             <div className="col formdiv">
-              { hideReg && <div style={mountedStyle}><Loginpage Register={this.Register}/></div>}
-              { !hideReg && <div style={mountedStyle}><Registrationpage/></div>}
+              { showSigninPage && <div style={mountedStyle}><Loginpage showSignupPage={this.showSignupPage} showForgetPassPage={this.showForgetPassPage} /></div>}
+              { showSignupPage && <div style={mountedStyle}><LoginSignuppage showSigninPage={this.showSigninPage}/></div>}
+              { showForgetpassPage && <div style={mountedStyle}><Forgotpasspage showSignupPage={this.showSignupPage} showSigninPage={this.showSigninPage}/></div>}
             </div>
             <div className="col imagediv">
              

@@ -4,11 +4,11 @@ import './float-label.css';
 import gmailLogo from '../src/gmail-icon.svg';
 import outlookLogo from '../src/outlook-icon.svg';
 import linkedinLogo from '../src/linkedin.svg';
-function LoginSignuppage(){
+export default function LoginSignuppage({showSigninPage}:{showSigninPage:any}){
    return(
      <div className="container">
       
-    <p className="account_text">Have an account?<span className="signuplink"> Sign In</span></p>
+    <p className="account_text">Have an account?<span className="signuplink" onClick={()=>showSigninPage()}> Sign In</span></p>
     <p className="benefit_text">Start benefiting<span className="signuplink"> free trial</span> from our tools right away</p>
     <form className="ma-left">
       
@@ -64,4 +64,3 @@ function LoginSignuppage(){
 
    ) 
 }
-export default LoginSignuppage;

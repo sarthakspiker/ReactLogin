@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
 import './float-label.css';
-function Forgotpasspage(){
+export default function Forgotpasspage({showSignupPage,showSigninPage}:{showSignupPage:any,showSigninPage:any}){
    return(
      <div className="container">
       
-    <p className="account_text">Don't have an account?<span className="signuplink"> Sign up</span></p>
+    <p className="account_text">Don't have an account?<span className="signuplink" onClick={()=>showSignupPage()}> Sign up</span></p>
     
     <form className="login_form">
        <h2> Welcome To<span className="signuplink"> Blue Mind</span></h2>
@@ -20,10 +20,9 @@ function Forgotpasspage(){
 
 </div>
 <button type="submit" className="btn btn-primary login_button">Reset</button>
-<button type="submit" className="btn btn-primary login_button">Log In</button>
+<button className="btn btn-primary login_button" onClick={()=>showSigninPage()}>Log In</button>
 </form>
 </div>
 
    ) 
 }
-export default Forgotpasspage;
