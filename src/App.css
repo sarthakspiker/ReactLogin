@@ -193,3 +193,10 @@ box-shadow: none;
   padding:1%;
   cursor: pointer;
 }
+@media screen and (min-width: 0px) and (max-width: 1080px) {
+  #splitImage { display: none; }  /* show it on small screens */
+}
+
+@media screen and (min-width: 1081px) and (max-width: 3840px) {
+  #splitImage { display: block; }   /* hide it elsewhere */
+}

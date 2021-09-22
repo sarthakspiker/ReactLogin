@@ -39,7 +39,7 @@ export class App extends Component<{},{showSigninPage:boolean,showSignupPage:boo
               { showSignupPage && <div style={mountedStyle}><LoginSignuppage showSigninPage={this.showSigninPage}/></div>}
               { showForgetpassPage && <div style={mountedStyle}><Forgotpasspage showSignupPage={this.showSignupPage} showSigninPage={this.showSigninPage}/></div>}
             </div>
-            <div className="col imagediv">
+            <div className="col imagediv" id="splitImage">
              
         </div>
         </div>
