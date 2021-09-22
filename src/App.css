@@ -242,8 +242,11 @@ margin:auto;
   
 }
 
-.card-img-top{
-width: 50%;
+.card-top{
+height: 60vh;
+width:100%;
+background-size: cover;
+background-position:center center;
 }
 .greentick{
   width:10%;

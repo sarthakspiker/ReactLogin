@@ -4,7 +4,7 @@ import './float-label.css';
 import gmailLogo from '../src/gmail-icon.svg';
 import outlookLogo from '../src/outlook-icon.svg';
 import linkedinLogo from '../src/linkedin.svg';
-export default class LoginSignuppage extends Component<{showSigninPage:any},{firstName:string,lastName:string ,telephone:string,userEmail:string,userPass:string}>{
+export default class LoginSignuppage extends Component<{showSigninPage:any,showSuccessPage:any},{firstName:string,lastName:string ,telephone:string,userEmail:string,userPass:string}>{
 
   constructor(props:any) {
     super(props)
@@ -52,6 +52,7 @@ if (telephone === '' || regexp.test(telephone)) {
 };
 createAccount = () =>{
   console.log("Create Account for:" + this.state.userEmail +" with Pass:" + this.state.userPass);
+  this.props.showSuccessPage();
 }
 
  render(){  return(
