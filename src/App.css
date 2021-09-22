@@ -40,8 +40,9 @@ border-radius:15px 0 0 15px;
   }
   body{
       background-color: azure;
-      
-      
+      margin: 0;
+      padding: 0;
+      height: 100%; 
   }
   .signuplink{
   color: #1e1fec;

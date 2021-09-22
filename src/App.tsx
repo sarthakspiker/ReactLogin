@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import './App.css';
@@ -12,7 +11,6 @@ export class App extends Component<{},{showSigninPage:boolean,showSignupPage:boo
     
     constructor(props:{}) {
         super(props)
-
         this.state = {
             showSigninPage:true,
             showSignupPage:false,
