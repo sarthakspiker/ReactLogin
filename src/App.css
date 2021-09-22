@@ -33,7 +33,7 @@ border-radius:15px 0 0 15px;
       margin-top: 1rem;
       font-family: "Open Sans", sans-serif;
       font-size: medium;
-      margin-left: 10%;
+      /* margin-left: 10%; */
       font-weight: lighter;
       
       
@@ -51,7 +51,7 @@ border-radius:15px 0 0 15px;
   cursor: pointer;
   }
   .login_form{
-    margin-left: 10%;
+    /* margin-left: 10%; */
     margin-top: 20%;
   }
   .login_button{
@@ -114,14 +114,14 @@ border-radius:15px 0 0 15px;
   opacity: 0;
 }
 .border-lable-flt .form-control:placeholder-shown:not(:focus) + * {
-  font-size: 130%;
+  font-size: medium;
   opacity: .5;
-  top: .3em;
+  top: .5em;
 }
 .border-lable-flt .form-control-lg:placeholder-shown:not(:focus) + * {
-  font-size: 150%;
+  font-size: 130%;
   opacity: .5;
-  top: .3em;
+  top: .5em;
 }
 
 .input-group .border-lable-flt {
@@ -175,8 +175,8 @@ box-shadow: none;
 .benefit_text{
   margin-top: 1rem;
   font-family: "Open Sans", sans-serif;
-  font-size:small;
-  margin-left: 10%;
+  font-size:medium;
+  /* margin-left: 10%; */
   font-weight: lighter;
   
 }
@@ -185,18 +185,66 @@ box-shadow: none;
   font-size:x-small;
   font-family: "Open Sans", sans-serif;
 }
-.ma-left{
-  margin-left: 10%;
+.mal-10{
+  margin-left: 1%;
 }
 .social_icon{
   width:35px;
   padding:1%;
   cursor: pointer;
+margin:auto;
+  
 }
-@media screen and (min-width: 0px) and (max-width: 1080px) {
-  #splitImage { display: none; }  /* show it on small screens */
+
+.img_con{
+  display: flex;
+}
+/* @media screen and (min-width: 0px) and (max-width: 1080px) {
+  #splitImage { display: none; }  
+  
 }
 
 @media screen and (min-width: 1081px) and (max-width: 3840px) {
-  #splitImage { display: block; }   /* hide it elsewhere */
+  #splitImage { display: block; }   
+  .social_icon{
+    width:25px;
+  }
+} */
+
+ /* Media Query for Mobile Devices */
+ @media (max-width: 480px) {
+  #splitImage { display: none; } 
+  .social_icon{
+    width:25px;
+  }
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+  #splitImage { display: none; } 
+  
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px){
+  
+  #splitImage { display: none; } 
+}
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px){
+ 
+}
+
+/* Media Query for Large screens */
+@media (min-width: 1281px) {
+   /* hide it elsewhere */
+  
+}
+
+.card-img-top{
+width: 50%;
+}
+.greentick{
+  width:10%;
 }

@@ -41,11 +41,11 @@ render(){return(
        <div className="inner_form_div">
       
   <div className="form-group border-lable-flt">
-    <input type="email" id="label-email"  className="form-control myinput form-control-lg" placeholder="Enter Email" value={this.state.userEmail} onChange={this.onHandleEmailChange} required/>
+    <input type="email" id="label-email"  className="form-control myinput " placeholder="Enter Email" value={this.state.userEmail} onChange={this.onHandleEmailChange} required/>
     <label htmlFor="label-email">Email</label>
   </div>
   <div className="form-group border-lable-flt">
-    <input type="password" id="label-password" className="form-control myinput form-control-lg" placeholder="Password" value={this.state.userPass} onChange={this.onHandlePasswordChange} required/>
+    <input type="password" id="label-password" className="form-control myinput " placeholder="Password" value={this.state.userPass} onChange={this.onHandlePasswordChange} required/>
     <label htmlFor="label-password">Password</label>
   </div>
 

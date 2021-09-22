@@ -5,6 +5,7 @@ import './App.css';
 import Loginpage from './loginpage';
 import Forgotpasspage from './forgotpasspage';
 import LoginSignuppage from './loginsignuppage';
+import AccountCreated from './accountcreated';
 
 const mountedStyle = { animation: "inAnimation 300ms ease-in" };
 export class App extends Component<{},{showSigninPage:boolean,showSignupPage:boolean,showForgetpassPage:boolean}>{
@@ -33,11 +34,13 @@ export class App extends Component<{},{showSigninPage:boolean,showSignupPage:boo
     return (
 
     <div className="container-fluid mycontainer" >
+        {/* <AccountCreated></AccountCreated> */}
        <div className="row containerrow">
             <div className="col formdiv">
               { showSigninPage && <div style={mountedStyle}><Loginpage showSignupPage={this.showSignupPage} showForgetPassPage={this.showForgetPassPage} /></div>}
               { showSignupPage && <div style={mountedStyle}><LoginSignuppage showSigninPage={this.showSigninPage}/></div>}
               { showForgetpassPage && <div style={mountedStyle}><Forgotpasspage showSignupPage={this.showSignupPage} showSigninPage={this.showSigninPage}/></div>}
+            
             </div>
             <div className="col imagediv" id="splitImage">
              
