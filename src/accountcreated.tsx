@@ -17,8 +17,9 @@ render(){
   <img className="card-top" src={New} alt="Card image cap"/>
   </div>
   <div className="col" style={{paddingTop:'10%'}}>
-    <h2><img className="greentick" src={Tick} alt="Card image cap" style={{display:'inline'}} />Congratutations!</h2>
-    <p className="card-text center-center">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    <h2><img className="greentick" src={Tick} alt="Card image cap" style={{display:'inline'}} />Congratulations !!</h2>
+    <h4>Your account has been successfully created.</h4>
+    <p className="card-text center-center account_text">An email has been sent to your registered email ID. Please confirm your email to login.</p>
     <button type="submit" className="btn btn-primary login_button" onClick={()=>this.props.showSigninPage()} >Log In</button>
   </div>
 </div>
