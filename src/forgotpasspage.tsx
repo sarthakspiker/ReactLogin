@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import './float-label.css';
-export default class Forgotpasspage extends Component<{showSignupPage:any,showSigninPage:any},{userEmail:string}>{
+export default class Forgotpasspage extends Component<{showSignupPage:any,showSigninPage:any,showPasswordResetPage:any},{userEmail:string}>{
   constructor(props:any) {
     super(props)
     this.state = {
@@ -16,6 +16,7 @@ export default class Forgotpasspage extends Component<{showSignupPage:any,showSi
   };
   resetPassword = () =>{
     console.log("Reset Password for:" + this.state.userEmail);
+    this.props.showPasswordResetPage();
   }
   render(){   return(
      <div className="container">

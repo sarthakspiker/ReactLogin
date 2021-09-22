@@ -6,9 +6,11 @@ import Loginpage from './loginpage';
 import Forgotpasspage from './forgotpasspage';
 import LoginSignuppage from './loginsignuppage';
 import AccountCreated from './accountcreated';
+import PasswordReset from './passwordreset';
 
 const mountedStyle = { animation: "inAnimation 300ms ease-in" };
-export class App extends Component<{},{showSigninPage:boolean,showSignupPage:boolean,showForgetpassPage:boolean,showSuccessPage:boolean,showBanner:boolean}>{
+
+export class App extends Component<{},{showSigninPage:boolean,showSignupPage:boolean,showForgetpassPage:boolean,showSuccessPage:boolean,showPasswordResetPage:boolean,showBanner:boolean}>{
     
     constructor(props:{}) {
         super(props)
@@ -17,24 +19,29 @@ export class App extends Component<{},{showSigninPage:boolean,showSignupPage:boo
             showSignupPage:false,
             showForgetpassPage:false,
             showSuccessPage:false,
+            showPasswordResetPage:false,
             showBanner:true
         }
     }
     
     showSigninPage = ()=>{
-        this.setState({showSignupPage:false,showSigninPage:true,showForgetpassPage:false,showSuccessPage:false,showBanner:true});
+        this.setState({showSignupPage:false,showSigninPage:true,showForgetpassPage:false,showSuccessPage:false,showPasswordResetPage:false,showBanner:true});
     }
     showSignupPage = ()=>{
-        this.setState({showSignupPage:true,showSigninPage:false,showForgetpassPage:false,showSuccessPage:false,showBanner:true});
+        this.setState({showSignupPage:true,showSigninPage:false,showForgetpassPage:false,showSuccessPage:false,showPasswordResetPage:false,showBanner:true});
     }
     showForgetPassPage = ()=>{
-        this.setState({showSignupPage:false,showSigninPage:false,showForgetpassPage:true,showSuccessPage:false,showBanner:true});
+        this.setState({showSignupPage:false,showSigninPage:false,showForgetpassPage:true,showSuccessPage:false,showPasswordResetPage:false,showBanner:true});
     }
     showSuccessPage = ()=>{
-        this.setState({showSignupPage:false,showSigninPage:false,showForgetpassPage:false,showSuccessPage:true,showBanner:false});
+        this.setState({showSignupPage:false,showSigninPage:false,showForgetpassPage:false,showSuccessPage:true,showPasswordResetPage:false,showBanner:false});
+    } 
+    showPasswordResetPage = ()=>{
+        this.setState({showSignupPage:false,showSigninPage:false,showForgetpassPage:false,showSuccessPage:false,showPasswordResetPage:true,showBanner:false});
     }  
+
   render(){  
-      const {showSigninPage,showSignupPage,showForgetpassPage,showSuccessPage,showBanner} = this.state;
+      const {showSigninPage,showSignupPage,showForgetpassPage,showSuccessPage,showPasswordResetPage,showBanner} = this.state;
     return (
         <div>
         { showBanner &&
@@ -43,15 +50,15 @@ export class App extends Component<{},{showSigninPage:boolean,showSignupPage:boo
             <div className="col formdiv">
               { showSigninPage && <div style={mountedStyle}><Loginpage showSignupPage={this.showSignupPage} showForgetPassPage={this.showForgetPassPage} /></div>}
               { showSignupPage && <div style={mountedStyle}><LoginSignuppage showSigninPage={this.showSigninPage} showSuccessPage={this.showSuccessPage}/></div>}
-              { showForgetpassPage && <div style={mountedStyle}><Forgotpasspage showSignupPage={this.showSignupPage} showSigninPage={this.showSigninPage}/></div>}
+              { showForgetpassPage && <div style={mountedStyle}><Forgotpasspage showSignupPage={this.showSignupPage} showSigninPage={this.showSigninPage} showPasswordResetPage={this.showPasswordResetPage}/></div>}
             </div>
             <div className="col imagediv" id="splitImage"/>
 
         </div>
         {/* { showSuccessPage && <div style={mountedStyle}><AccountCreated showSigninPage={this.showSigninPage}/></div>} */}
     </div>}
-    
     { showSuccessPage && <div style={mountedStyle}><AccountCreated showSigninPage={this.showSigninPage}/></div>}
+    { showPasswordResetPage && <div style={mountedStyle}><PasswordReset showSigninPage={this.showSigninPage}/></div>}
     </div>
   );
 }
