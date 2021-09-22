@@ -25,8 +25,8 @@ export default function LoginSignuppage({showSigninPage}:{showSigninPage:any}){
     <label htmlFor="label-email">Email</label>
   </div>
   <div className="form-group border-lable-flt">
-    <input type="number" id="label-phone"  className="form-control myinput " placeholder="Phone Number" required/>
-    <label htmlFor="label-email">Phone number</label>
+    <input type="number" id="label-phone"  className="form-control myinput "  placeholder="Phone Number" required/>
+    <label htmlFor="label-phone">Phone number</label>
   </div>
   <div className="form-group border-lable-flt">
     <input type="password" id="label-password" className="form-control myinput " placeholder="6+ Strong Alpha Numeric Characters" required/>
@@ -63,4 +63,7 @@ export default function LoginSignuppage({showSigninPage}:{showSigninPage:any}){
 </div>
 
    ) 
+
+   
+ 
 }
