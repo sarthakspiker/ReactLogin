@@ -32,7 +32,7 @@ loginClient = () =>{
   console.log("Login Client:" + this.state.userEmail +" with Pass:" + this.state.userPass);
 }
 render(){return(
-     <div className="container">
+     <div className="container-fluid">
       
     <p className="account_text">Don't have an account?<span className="signuplink" onClick={()=>this.props.showSignupPage()}> Sign up</span></p>
     

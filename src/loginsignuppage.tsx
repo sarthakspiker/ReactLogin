@@ -56,7 +56,7 @@ createAccount = () =>{
 }
 
  render(){  return(
-     <div className="container">
+     <div className="container-fluid">
       
     <p className="account_text">Have an account?<span className="signuplink" onClick={()=>this.props.showSigninPage()}> Sign In</span></p>
     <p className="benefit_text">Start benefiting<span className="signuplink"> free trial</span> from our tools right away</p>

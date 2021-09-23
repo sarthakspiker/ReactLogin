@@ -52,12 +52,12 @@ export class App extends Component<{},{showSigninPage:boolean,showSignupPage:boo
               { showSignupPage && <div style={mountedStyle}><LoginSignuppage showSigninPage={this.showSigninPage} showSuccessPage={this.showSuccessPage}/></div>}
               { showForgetpassPage && <div style={mountedStyle}><Forgotpasspage showSignupPage={this.showSignupPage} showSigninPage={this.showSigninPage} showPasswordResetPage={this.showPasswordResetPage}/></div>}
             </div>
-            <div className="col imagediv" id="splitImage"/>
+            <div className="col-6 imagediv" id="splitImage"/>
 
         </div>
         {/* { showSuccessPage && <div style={mountedStyle}><AccountCreated showSigninPage={this.showSigninPage}/></div>} */}
     </div>}
-    { showSuccessPage && <div style={mountedStyle}><AccountCreated showSigninPage={this.showSigninPage}/></div>}
+    { showSuccessPage && <div className="mymessagecontainer" style={mountedStyle}><AccountCreated showSigninPage={this.showSigninPage}/></div>}
     { showPasswordResetPage && <div style={mountedStyle}><PasswordReset showSigninPage={this.showSigninPage}/></div>}
     </div>
   );
