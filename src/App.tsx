@@ -14,13 +14,14 @@ import Vantaclass from './vantaclass';
 
 const mountedStyle = { animation: "inAnimation 300ms ease-in" };
 
-export class App extends Component<{},{showSigninPage:boolean,showSignupPage:boolean,showForgetpassPage:boolean,showSuccessPage:boolean,showPasswordResetPage:boolean,showBanner:boolean}>{
+export class App extends Component<{},{showSigninPage:boolean,showClientSigninPage:boolean,showSignupPage:boolean,showForgetpassPage:boolean,showSuccessPage:boolean,showPasswordResetPage:boolean,showBanner:boolean}>{
     
     constructor(props:{}) {
         super(props)
     
         this.state = {
             showSigninPage:true,
+            showClientSigninPage:false,
             showSignupPage:false,
             showForgetpassPage:false,
             showSuccessPage:false,
@@ -28,45 +29,46 @@ export class App extends Component<{},{showSigninPage:boolean,showSignupPage:boo
             showBanner:true
         }
     }
-    
+
     showSigninPage = ()=>{
-        this.setState({showSignupPage:false,showSigninPage:true,showForgetpassPage:false,showSuccessPage:false,showPasswordResetPage:false,showBanner:true});
+        this.setState({showSignupPage:false,showClientSigninPage:false,showSigninPage:true,showForgetpassPage:false,showSuccessPage:false,showPasswordResetPage:false,showBanner:true});
+    }
+    showClientSigninPage = ()=>{
+        this.setState({showSignupPage:false,showClientSigninPage:true,showSigninPage:false,showForgetpassPage:false,showSuccessPage:false,showPasswordResetPage:false,showBanner:true});
     }
     showSignupPage = ()=>{
-        this.setState({showSignupPage:true,showSigninPage:false,showForgetpassPage:false,showSuccessPage:false,showPasswordResetPage:false,showBanner:true});
+        this.setState({showSignupPage:true,showClientSigninPage:false,showSigninPage:false,showForgetpassPage:false,showSuccessPage:false,showPasswordResetPage:false,showBanner:true});
     }
     showForgetPassPage = ()=>{
-        this.setState({showSignupPage:false,showSigninPage:false,showForgetpassPage:true,showSuccessPage:false,showPasswordResetPage:false,showBanner:true});
+        this.setState({showSignupPage:false,showClientSigninPage:false,showSigninPage:false,showForgetpassPage:true,showSuccessPage:false,showPasswordResetPage:false,showBanner:true});
     }
     showSuccessPage = ()=>{
-        this.setState({showSignupPage:false,showSigninPage:false,showForgetpassPage:false,showSuccessPage:true,showPasswordResetPage:false,showBanner:false});
+        this.setState({showSignupPage:false,showClientSigninPage:false,showSigninPage:false,showForgetpassPage:false,showSuccessPage:true,showPasswordResetPage:false,showBanner:true});
     } 
     showPasswordResetPage = ()=>{
-        this.setState({showSignupPage:false,showSigninPage:false,showForgetpassPage:false,showSuccessPage:false,showPasswordResetPage:true,showBanner:false});
+        this.setState({showSignupPage:false,showClientSigninPage:false,showSigninPage:false,showForgetpassPage:false,showSuccessPage:false,showPasswordResetPage:true,showBanner:true});
     }  
    
   render(){  
-      const {showSigninPage,showSignupPage,showForgetpassPage,showSuccessPage,showPasswordResetPage,showBanner} = this.state;
+      const {showSigninPage,showClientSigninPage,showSignupPage,showForgetpassPage,showSuccessPage,showPasswordResetPage,showBanner} = this.state;
     return (
         <div>
         { showBanner &&
         <div className="container-fluid mycontainer" >
        <div className="row containerrow">
             <div className="col formdiv">
-            
-              { showSigninPage && <div style={mountedStyle}><Loginpage showSignupPage={this.showSignupPage} showForgetPassPage={this.showForgetPassPage} /></div>}
-              { showSignupPage && <div style={mountedStyle}><LoginSignuppage showSigninPage={this.showSigninPage} showSuccessPage={this.showSuccessPage}/></div>}
-              { showForgetpassPage && <div style={mountedStyle}><Forgotpasspage showSignupPage={this.showSignupPage} showSigninPage={this.showSigninPage} showPasswordResetPage={this.showPasswordResetPage}/></div>}
+            { showSigninPage && <div style={mountedStyle}><Loginpage showSignupPage={this.showSignupPage} showForgetPassPage={this.showForgetPassPage} showClientSigninPage={this.showClientSigninPage}/></div>}
+            { showSignupPage && <div style={mountedStyle}><LoginSignuppage showSigninPage={this.showSigninPage} showSuccessPage={this.showSuccessPage}/></div>}
+            { showForgetpassPage && <div style={mountedStyle}><Forgotpasspage showSignupPage={this.showSignupPage} showSigninPage={this.showSigninPage} showPasswordResetPage={this.showPasswordResetPage}/></div>}
+            { showClientSigninPage && <div style={mountedStyle}><ClientLogin showSigninPage={this.showSigninPage}/></div>}  
+            { showSuccessPage && <div style={mountedStyle}><AccountCreated showSigninPage={this.showSigninPage}/></div>}
+            { showPasswordResetPage && <div style={mountedStyle}><PasswordReset showSigninPage={this.showSigninPage}/></div>}
             </div>
             <div className="col-6 imagediv" id="splitImage">
             <Vantaclass></Vantaclass>
             </div>
         </div>
-        {/* { showSuccessPage && <div style={mountedStyle}><AccountCreated showSigninPage={this.showSigninPage}/></div>} */}
     </div>}
-   
-    { showSuccessPage && <div className="mymessagecontainer" style={mountedStyle}><AccountCreated showSigninPage={this.showSigninPage}/></div>}
-    { showPasswordResetPage && <div style={mountedStyle}><PasswordReset showSigninPage={this.showSigninPage}/></div>}
     </div>
   );
 }
