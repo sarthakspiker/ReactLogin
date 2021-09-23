@@ -4,8 +4,7 @@ import './float-label.css';
 import New from '../src/previewemail.gif';
 import Emailgif from '../src/preview.gif'
 import Tick from '../src/greentick2.gif';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.min.js';
+
 
 export default class AccountCreated extends Component <{showSigninPage:any},{}> {
 

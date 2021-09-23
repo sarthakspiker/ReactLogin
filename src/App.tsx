@@ -7,6 +7,9 @@ import Forgotpasspage from './forgotpasspage';
 import LoginSignuppage from './loginsignuppage';
 import AccountCreated from './accountcreated';
 import PasswordReset from './passwordreset';
+import ClientLogin from './clientlogin';
+import SetPassPage from './setpasspage';
+import ResetSuccess from './resetsuccess';
 
 const mountedStyle = { animation: "inAnimation 300ms ease-in" };
 
@@ -48,6 +51,7 @@ export class App extends Component<{},{showSigninPage:boolean,showSignupPage:boo
         <div className="container-fluid mycontainer" >
        <div className="row containerrow">
             <div className="col formdiv">
+            
               { showSigninPage && <div style={mountedStyle}><Loginpage showSignupPage={this.showSignupPage} showForgetPassPage={this.showForgetPassPage} /></div>}
               { showSignupPage && <div style={mountedStyle}><LoginSignuppage showSigninPage={this.showSigninPage} showSuccessPage={this.showSuccessPage}/></div>}
               { showForgetpassPage && <div style={mountedStyle}><Forgotpasspage showSignupPage={this.showSignupPage} showSigninPage={this.showSigninPage} showPasswordResetPage={this.showPasswordResetPage}/></div>}
@@ -57,6 +61,7 @@ export class App extends Component<{},{showSigninPage:boolean,showSignupPage:boo
         </div>
         {/* { showSuccessPage && <div style={mountedStyle}><AccountCreated showSigninPage={this.showSigninPage}/></div>} */}
     </div>}
+   
     { showSuccessPage && <div className="mymessagecontainer" style={mountedStyle}><AccountCreated showSigninPage={this.showSigninPage}/></div>}
     { showPasswordResetPage && <div style={mountedStyle}><PasswordReset showSigninPage={this.showSigninPage}/></div>}
     </div>

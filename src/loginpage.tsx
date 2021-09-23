@@ -53,8 +53,12 @@ render(){return(
 <div className="forgot_div">
 <span className="forgot_pass" onClick={()=>this.props.showForgetPassPage()} >Forgot password?</span>
 </div>
-<button type="submit" className="btn btn-primary login_button" onClick={()=>this.loginAdvisor()}>Advisor Log In</button>
-<button type="submit" className="btn btn-primary login_button" onClick={()=>this.loginClient()}>Client Log In</button>
+<button type="submit" className="btn btn-primary login_button" onClick={()=>this.loginAdvisor()}>Log In</button>
+<p className="account_text" style={{marginTop:'10%'}}>Are you a Client?<span className="signuplink" onClick={()=>this.loginClient()}> Client Log In</span>
+{/* <button type="submit" className="btn btn-outline-primary" style={{width:'50%', margin:'3%',display:'inline'}} onClick={()=>this.loginClient()} >Client Log In <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chevron-right" viewBox="0 0 16 16">
+<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+</svg></button> */}
+</p>
 </form>
 </div>
 
