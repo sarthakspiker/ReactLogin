@@ -9,12 +9,11 @@ min-height: 100vh;
   }
   .imagediv{
       
-  
+  min-height: 100vh;
    
      
-      background-image: url('../src/Banner-15.svg');
-   background-size: cover;
-   background-position:center center;
+     
+   
     
   }
   .mycontainer{

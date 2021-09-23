@@ -10,6 +10,7 @@ import PasswordReset from './passwordreset';
 import ClientLogin from './clientlogin';
 import SetPassPage from './setpasspage';
 import ResetSuccess from './resetsuccess';
+import Vantaclass from './vantaclass';
 
 const mountedStyle = { animation: "inAnimation 300ms ease-in" };
 
@@ -17,6 +18,7 @@ export class App extends Component<{},{showSigninPage:boolean,showSignupPage:boo
     
     constructor(props:{}) {
         super(props)
+    
         this.state = {
             showSigninPage:true,
             showSignupPage:false,
@@ -42,7 +44,7 @@ export class App extends Component<{},{showSigninPage:boolean,showSignupPage:boo
     showPasswordResetPage = ()=>{
         this.setState({showSignupPage:false,showSigninPage:false,showForgetpassPage:false,showSuccessPage:false,showPasswordResetPage:true,showBanner:false});
     }  
-
+   
   render(){  
       const {showSigninPage,showSignupPage,showForgetpassPage,showSuccessPage,showPasswordResetPage,showBanner} = this.state;
     return (
@@ -56,8 +58,9 @@ export class App extends Component<{},{showSigninPage:boolean,showSignupPage:boo
               { showSignupPage && <div style={mountedStyle}><LoginSignuppage showSigninPage={this.showSigninPage} showSuccessPage={this.showSuccessPage}/></div>}
               { showForgetpassPage && <div style={mountedStyle}><Forgotpasspage showSignupPage={this.showSignupPage} showSigninPage={this.showSigninPage} showPasswordResetPage={this.showPasswordResetPage}/></div>}
             </div>
-            <div className="col-6 imagediv" id="splitImage"/>
-
+            <div className="col-6 imagediv" id="splitImage">
+            <Vantaclass></Vantaclass>
+            </div>
         </div>
         {/* { showSuccessPage && <div style={mountedStyle}><AccountCreated showSigninPage={this.showSigninPage}/></div>} */}
     </div>}
