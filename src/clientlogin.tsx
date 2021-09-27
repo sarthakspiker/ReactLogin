@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import './float-label.css';
 
-export default class ClientLogin extends Component<{ showSigninPage: any }, { userEmail: string }>{
+export default class ClientLogin extends Component<{ showSigninPage: any,showClientsuccesspage:any }, { userEmail: string }>{
    constructor(props: any) {
       super(props)
       this.state = {
@@ -15,6 +15,7 @@ export default class ClientLogin extends Component<{ showSigninPage: any }, { us
    };
    loginClient = () => {
       console.log("Login Client:" + this.state.userEmail + " with Pass:");
+      this.props.showClientsuccesspage();
    }
 
    render() {
