@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import './float-label.css';
 
-export default class SetPassPage extends Component<{}, { pass: string, confirmPass: string }>{
+export default class SetPassPage extends Component<{ }, { pass: string, confirmPass: string }>{
    constructor(props: any) {
       super(props)
       this.state = {

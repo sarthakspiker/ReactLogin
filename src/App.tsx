@@ -12,6 +12,7 @@ import SetPassPage from './setpasspage';
 import ResetSuccess from './resetsuccess';
 import Vantaclass from './vantaclass';
 
+import ClientLoginEmail from './clientLoginemail';
 const mountedStyle = { animation: "inAnimation 300ms ease-in" };
 
 export class App extends Component<{},{showSigninPage:boolean,showClientSigninPage:boolean,showSignupPage:boolean,showForgetpassPage:boolean,showSuccessPage:boolean,showPasswordResetPage:boolean,showBanner:boolean}>{
@@ -26,7 +27,8 @@ export class App extends Component<{},{showSigninPage:boolean,showClientSigninPa
             showForgetpassPage:false,
             showSuccessPage:false,
             showPasswordResetPage:false,
-            showBanner:true
+            showBanner:true,
+            
         }
     }
 
@@ -39,6 +41,7 @@ export class App extends Component<{},{showSigninPage:boolean,showClientSigninPa
     showSignupPage = ()=>{
         this.setState({showSignupPage:true,showClientSigninPage:false,showSigninPage:false,showForgetpassPage:false,showSuccessPage:false,showPasswordResetPage:false,showBanner:true});
     }
+  
     showForgetPassPage = ()=>{
         this.setState({showSignupPage:false,showClientSigninPage:false,showSigninPage:false,showForgetpassPage:true,showSuccessPage:false,showPasswordResetPage:false,showBanner:true});
     }
@@ -55,7 +58,9 @@ export class App extends Component<{},{showSigninPage:boolean,showClientSigninPa
         <div>
         { showBanner &&
         <div className="container-fluid mycontainer" >
+           
        <div className="row containerrow">
+        
             <div className="col formdiv">
             { showSigninPage && <div style={mountedStyle}><Loginpage showSignupPage={this.showSignupPage} showForgetPassPage={this.showForgetPassPage} showClientSigninPage={this.showClientSigninPage}/></div>}
             { showSignupPage && <div style={mountedStyle}><LoginSignuppage showSigninPage={this.showSigninPage} showSuccessPage={this.showSuccessPage}/></div>}
@@ -63,9 +68,13 @@ export class App extends Component<{},{showSigninPage:boolean,showClientSigninPa
             { showClientSigninPage && <div style={mountedStyle}><ClientLogin showSigninPage={this.showSigninPage}/></div>}  
             { showSuccessPage && <div style={mountedStyle}><AccountCreated showSigninPage={this.showSigninPage}/></div>}
             { showPasswordResetPage && <div style={mountedStyle}><PasswordReset showSigninPage={this.showSigninPage}/></div>}
+          
+            
+         
             </div>
             <div className="col-6 imagediv" id="splitImage">
             <Vantaclass></Vantaclass>
+           
             </div>
         </div>
     </div>}

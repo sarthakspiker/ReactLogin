@@ -48,6 +48,7 @@ export default class LoginSignuppage extends Component<{ showSigninPage: any, sh
     console.log("Create Account for:" + this.state.userEmail + " with Pass:" + this.state.userPass);
     this.props.showSuccessPage();
   }
+ 
 
   render() {
     return (
@@ -82,6 +83,8 @@ export default class LoginSignuppage extends Component<{ showSigninPage: any, sh
             </label>
           </div>
           <button type="submit" className="btn btn-primary login_button" onClick={() => this.createAccount()}>Create Account</button>
+          {/* <button type="submit" className="btn btn-primary login_button" onClick={() => this.setpasspageshow()}>show set password page</button>
+          <button type="submit" className="btn btn-primary login_button" onClick={() => this.createAccount()}>Create Account</button> */}
         </form>
         <div className="ma-left mt-2" style={{ height: '20px', borderBottom: '1px solid grey', textAlign: 'center' }}>
           <span style={{ fontSize: 'x-small', backgroundColor: 'white', color: 'blue', padding: '0 10px' }}>
