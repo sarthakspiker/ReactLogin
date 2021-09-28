@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
 import './float-label.css';
-import New from '../src/previewemail.gif';
-import Resetgif from '../src/reset.gif'
-import Tick from '../src/greentick2.gif';
+import New from '../src/assets/previewemail.gif';
+import Resetgif from '../src/assets/reset.gif'
+import Tick from '../src/assets/greentick2.gif';
 
 
 export default class ResetSuccess extends Component {
 
    render() {
       return (
-         <div className="container-fluid text-center " style={{ width: '50%', margin: '2% auto' }} >
+         <div className="container-fluid text-center " style={{ width: '100%', margin: '2% auto' }} >
             <img className="card-top" src={Resetgif} alt="Card image cap" />
             <h2 ><img className="greentick" src={Tick} alt="Card image cap" style={{ display: 'inline' }} /> Congratulations !!</h2>
             <h5>Your Password has been reset successfully.</h5>

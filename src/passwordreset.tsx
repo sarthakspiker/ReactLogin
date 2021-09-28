@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import './float-label.css';
-import New from '../src/previewemail.gif';
-import Tick from '../src/greentick2.gif';
+import New from '../src/assets/previewemail.gif';
+import Tick from '../src/assets/greentick2.gif';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 

@@ -11,7 +11,7 @@ import ClientLogin from './clientlogin';
 import SetPassPage from './setpasspage';
 import ResetSuccess from './resetsuccess';
 import Vantaclass from './vantaclass';
-
+import Unsubscribe from './unsubscribe';
 import ClientLoginEmail from './clientLoginemail';
 const mountedStyle = { animation: "inAnimation 300ms ease-in" };
 
@@ -59,10 +59,13 @@ export class App extends Component<{},{showSigninPage:boolean,showClientSigninPa
       const {showSigninPage,showClientSigninPage,showClientsuccesspage,showSignupPage,showForgetpassPage,showSuccessPage,showPasswordResetPage,showBanner} = this.state;
     return (
         <div>
+            
         { showBanner &&
         <div className="container-fluid mycontainer" >  
         <div className="row containerrow">
+            
             <div className="col formdiv">
+            
             { showSigninPage && <div style={mountedStyle}><Loginpage showSignupPage={this.showSignupPage} showForgetPassPage={this.showForgetPassPage} showClientSigninPage={this.showClientSigninPage}/></div>}
             { showSignupPage && <div style={mountedStyle}><LoginSignuppage showSigninPage={this.showSigninPage} showSuccessPage={this.showSuccessPage}/></div>}
             { showForgetpassPage && <div style={mountedStyle}><Forgotpasspage showSignupPage={this.showSignupPage} showSigninPage={this.showSigninPage} showPasswordResetPage={this.showPasswordResetPage}/></div>}

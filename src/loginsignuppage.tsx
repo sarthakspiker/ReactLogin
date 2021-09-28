@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import './float-label.css';
-import gmailLogo from '../src/gmail-icon.svg';
-import outlookLogo from '../src/outlook-icon.svg';
-import linkedinLogo from '../src/linkedin.svg';
+import gmailLogo from '../src/assets/gmail-icon.svg';
+import outlookLogo from '../src/assets/outlook-icon.svg';
+import linkedinLogo from '../src/assets/linkedin.svg';
 export default class LoginSignuppage extends Component<{ showSigninPage: any, showSuccessPage: any }, { firstName: string, lastName: string, telephone: string, userEmail: string, userPass: string }>{
 
   constructor(props: any) {

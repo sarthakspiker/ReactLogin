@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import TRUNK from '../node_modules/vanta/dist/vanta.trunk.min';
 import p5Min from './p5.min.js';
-import newBanner from '../src/newBanner.png';
+import newBanner from '../src/assets/newBanner.png';
 
 const elem = (document.compatMode === "CSS1Compat") ?
   document.documentElement :
