@@ -34,7 +34,7 @@ export default class SetPassPage extends Component<{ }, { pass: string, confirmP
    render() {
       return (<div className="container-fluid">
          <form className="login_form">
-            <h2> Welcome To<span className="signuplink"> BlueMind</span></h2>
+            <h2> Welcome To<span className="signuplink"> DummyCompany</span></h2>
             <div className="inner_form_div">
                <div className="form-group border-lable-flt">
                   <input type="password" id="label-password" className="form-control myinput " placeholder="6+ Strong Alpha Numeric Characters" value={this.state.pass} onChange={this.onHandlePasswordChange} required />

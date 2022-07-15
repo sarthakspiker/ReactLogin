@@ -21,7 +21,7 @@ export default class Forgotpasspage extends Component<{ showSignupPage: any, sho
       <div className="container">
         <p className="account_text">Don't have an account?<span className="signuplink" onClick={() => this.props.showSignupPage()}> Sign up</span></p>
         <form className="login_form">
-          <h2> Welcome To<span className="signuplink"> BlueMind</span></h2>
+          <h2> Welcome To<span className="signuplink"> DummyCompany</span></h2>
           <p className="forgot_text" >Forgot your password ?<span className="black_text" > No worries we can help</span></p>
           <div className="inner_form_div">
             <div className="form-group border-lable-flt">

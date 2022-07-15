@@ -22,7 +22,7 @@ export default class ClientLogin extends Component<{ showSigninPage: any,showCli
       return (<div className="container-fluid">
          <p className="account_text">Not a client?<span className="signuplink" onClick={() => this.props.showSigninPage()}> Advisor Login</span></p>
          <form className="login_form">
-            <h2> Welcome To<span className="signuplink"> BlueMind</span></h2>
+            <h2> Welcome To<span className="signuplink"> DummyCompany</span></h2>
             <div className="inner_form_div">
                <div className="form-group border-lable-flt">
                   <input type="email" id="label-email" className="form-control myinput " placeholder="Enter Email" required />

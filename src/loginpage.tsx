@@ -31,7 +31,7 @@ export default class Loginpage extends Component<{ showSignupPage: any, showForg
       <div className="container-fluid">
         <p className="account_text">Don't have an account?<span className="signuplink" onClick={() => this.props.showSignupPage()}> Sign up</span></p>
         <form className="login_form">
-          <h2> Welcome To<span className="signuplink"> BlueMind</span></h2>
+          <h2> Welcome To<span className="signuplink"> DummyCompany</span></h2>
           <div className="inner_form_div">
             <div className="form-group border-lable-flt">
               <input type="email" id="label-email" className="form-control myinput " placeholder="Enter Email" value={this.state.userEmail} onChange={this.onHandleEmailChange} required />
